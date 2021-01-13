@@ -4,14 +4,14 @@
   
 This Power BI template is used for loading Service Now records from the task table using Rest API. I used [Alberto Colombo's blog post](https://blog.kofko.xyz/connect-servicenow-and-powerbi) as a reference to create the template.
 
-## References:
-* https://developer.servicenow.com/dev.do#!/reference/api/orlando/rest/c_TableAPI
-* https://docs.servicenow.com/bundle/kingston-platform-user-interface/page/use/common-ui-elements/reference/r_OpAvailableFiltersQueries.html
-
-
 <h1 align="left">
   <img src="ReadMe/screenshot.PNG" />
 </h1>
+
+
+## References:
+* https://developer.servicenow.com/dev.do#!/reference/api/orlando/rest/c_TableAPI
+* https://docs.servicenow.com/bundle/kingston-platform-user-interface/page/use/common-ui-elements/reference/r_OpAvailableFiltersQueries.html
 
 
 ## Dependencies
