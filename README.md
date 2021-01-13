@@ -1,4 +1,4 @@
-# Service Now Power BI Dashboard Template
+# Service Now Power BI Template
   
 This Power BI template is used for loading Service Now records from the task table using Rest API. I used [Alberto Colombo's blog post](https://blog.kofko.xyz/connect-servicenow-and-powerbi) as a reference to create the template.
 
