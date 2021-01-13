@@ -24,3 +24,11 @@ This Power BI template is used for loading Service Now records from the task tab
 | Rest API |A REST API (also known as RESTful API) is an application programming interface (API or web API) that conforms to the constraints of REST architectural style and allows for interaction with RESTful web services. REST stands for representational state transfer and was created by computer scientist Roy Fielding.|
 
 <br>
+
+
+## Functionality 
+This template requires the user to enter parameters as per the following screen.
+
+<h1 align="left">
+  <img src="ReadMe/template_parameters.PNG" />
+</h1>
