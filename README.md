@@ -51,7 +51,8 @@ This template requires the user to enter parameters as per the following screen.
 ### Number of months:
 
 ```
-= Json.Document(Web.Contents(servicenow_url & "/api/now/table/task?sysparm_display_value=true
+= Json.Document(Web.Contents(servicenow_url & "/api/now/table/task?
+sysparm_display_value=true
 &sysparm_query=sys_class_nameINsc_req_item,incident
 ^sys_created_onONLast%20" & number_of_months & "%20months
 %40javascript%3Ags.beginningOfLast" & number_of_months & "Months()
@@ -83,7 +84,8 @@ This template requires the user to enter parameters as per the following screen.
 ### Between 2 dates:
 
 ```
-= Json.Document(Web.Contents(servicenow_url & "/api/now/table/task?sysparm_display_value=true
+= Json.Document(Web.Contents(servicenow_url & "/api/now/table/task?
+sysparm_display_value=true
 &sysparm_query=sys_class_nameINsc_req_item,incident
 ^sys_created_onBETWEEN
 javascript:gs.dateGenerate('" & Date.ToText(start_date, "yyyy-MM-dd") & "','00:00:00')@
