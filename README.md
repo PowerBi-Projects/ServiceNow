@@ -19,7 +19,6 @@ This Power BI template is used for loading Service Now records from the task tab
 |:------------------------------------------|:--------------------------|
 |[Power BI Desktop](https://powerbi.microsoft.com/en-us/downloads/)|Template|
 |[Power BI Desktop](https://community.powerbi.com/t5/Themes-Gallery/University-of-Melbourne/td-p/163417)|Theme|
-|[Snagit](http://discover.techsmith.com/snagit-non-brand-desktop/?gclid=CNzQiOTO09UCFVoFKgod9EIB3g)|Read Me|
 <br>
 
 ## Glossary of Terms
