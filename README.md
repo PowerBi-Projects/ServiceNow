@@ -44,6 +44,8 @@ This template requires the user to enter parameters as per the following screen.
 * assignment_group = Only one assignment group e.g. "Service Desk"
 * number_of_months = Start small, it depends on how many records are returned. I find 6 months works for me to return about 5,000 records without a connection failure.
 
+<br>
+  
 ## Rest API call examples
 
 ### Number of months:
