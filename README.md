@@ -27,7 +27,8 @@ This Power BI template is used for loading Service Now records from the task tab
   
 | Term                      | Meaning                                                                                  |
 |:--------------------------|:-----------------------------------------------------------------------------------------|
-| Rest API |A REST API (also known as RESTful API) is an application programming interface (API or web API) that conforms to the constraints of REST architectural style and allows for interaction with RESTful web services. REST stands for representational state transfer and was created by computer scientist Roy Fielding.|
+| Rest API       |A REST API (also known as RESTful API) is an application programming interface (API or web API) that conforms to the constraints of REST architectural style and allows for interaction with RESTful web services. REST stands for representational state transfer and was created by computer scientist Roy Fielding.|
+| Service Now   |A ticketing tool that processes and catalogs customer service requests. You can raise requests that deal with incidents, changes, problems, and other services.|
 
 <br>
 
@@ -41,4 +42,74 @@ This template requires the user to enter parameters as per the following screen.
 
 * servicenow_url = https://YOUR_COMPANY_NAME.service-now.com/
 * assignment_group = Only one assignment group e.g. "Service Desk"
-* number_of_months = Start small, it depends on how many records are returned. I find 6 months works for me to return about 5,000 records without a connection failure.
+* number_of_months = Start small, it depends on how many records are returned. I find 6 months works for me to return about 6,000 records without a connection failure.
+
+<br>
+  
+## Rest API call examples
+
+### Number of months:
+
+```
+= Json.Document(Web.Contents(servicenow_url & "/api/now/table/task?
+sysparm_display_value=true
+&sysparm_query=sys_class_nameINsc_req_item,incident
+^sys_created_onONLast%20" & number_of_months & "%20months
+%40javascript%3Ags.beginningOfLast" & number_of_months & "Months()
+%40javascript%3Ags.endOfLast" & number_of_months & "Months()
+&assignment_group=" & assignment_group & "
+&numberISNOTEMPTY
+&sysparm_exclude_reference_link=true
+&sysparm_fields=sys_id
+%2Cactive
+%2Capproval_set
+%2Cclosed_at
+%2Cdue_date
+%2Cnumber
+%2Copened_at
+%2Cshort_description
+%2Csla_due
+%2Csys_class_name
+%2Csys_created_on
+%2Csys_updated_on
+%2Cu_service_area
+%2Curgency
+%2Cassignment_group
+%2Cu_requestor
+%2Cassigned_to
+%2Cstate
+%2Cu_affected_user"))
+```
+
+### Between 2 dates:
+
+```
+= Json.Document(Web.Contents(servicenow_url & "/api/now/table/task?
+sysparm_display_value=true
+&sysparm_query=sys_class_nameINsc_req_item,incident
+^sys_created_onBETWEEN
+javascript:gs.dateGenerate('" & Date.ToText(start_date, "yyyy-MM-dd") & "','00:00:00')@
+javascript:gs.dateGenerate('" & Date.ToText(end_date, "yyyy-MM-dd") & "','00:00:00')
+&assignment_group=" & assignment_group & "
+&numberISNOTEMPTY
+&sysparm_exclude_reference_link=true
+&sysparm_fields=sys_id
+%2Cactive
+%2Capproval_set
+%2Cclosed_at
+%2Cdue_date
+%2Cnumber
+%2Copened_at
+%2Cshort_description
+%2Csla_due
+%2Csys_class_name
+%2Csys_created_on
+%2Csys_updated_on
+%2Cu_service_area
+%2Curgency
+%2Cassignment_group
+%2Cu_requestor
+%2Cassigned_to
+%2Cstate
+%2Cu_affected_user"))
+```
