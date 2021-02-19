@@ -19,7 +19,6 @@ This Power BI template is used for loading Service Now records from the task tab
 |:------------------------------------------|:--------------------------|
 |[Power BI Desktop](https://powerbi.microsoft.com/en-us/downloads/)|Template|
 |[Power BI Desktop](https://community.powerbi.com/t5/Themes-Gallery/University-of-Melbourne/td-p/163417)|Theme|
-|[Snagit](http://discover.techsmith.com/snagit-non-brand-desktop/?gclid=CNzQiOTO09UCFVoFKgod9EIB3g)|Read Me|
 <br>
 
 ## Glossary of Terms
@@ -43,6 +42,14 @@ This template requires the user to enter parameters as per the following screen.
 * servicenow_url = https://YOUR_COMPANY_NAME.service-now.com/
 * assignment_group = Only one assignment group e.g. "Service Desk"
 * number_of_months = Start small, it depends on how many records are returned. I find 6 months works for me to return about 6,000 records without a connection failure.
+
+<br>
+
+The first connection will require some credentials: you can use your local ServiceNow credentials or a service account
+
+<h1 align="left">
+  <img src="ReadMe/credentials.PNG" />
+</h1>
 
 <br>
   
