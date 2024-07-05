@@ -33,7 +33,7 @@ This Power BI template is used for loading Service Now records from the task tab
 
 
 ## Functionality 
-This message is because the template was create in Power BI Desktop for Report Server, but it can be used in either RS or Service.
+This message is because the template was created in [Power BI Desktop for Report Server](https://powerbi.microsoft.com/en-au/report-server/), but it can be used in either RS or Service.
 <h1 align="left">
   <img src="ReadMe/message.PNG" />
 </h1>
