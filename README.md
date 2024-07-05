@@ -46,7 +46,7 @@ This template requires the user to enter parameters as per the following screen.
 
 * servicenow_url = https://YOUR_COMPANY_NAME.service-now.com/
 * assignment_group = Only one assignment group e.g. "Service Desk"
-//* number_of_months = Start small, it depends on how many records are returned. I find 6 months works for me to return about 6,000 records without a connection failure.
+<!-- * number_of_months = Start small, it depends on how many records are returned. I find 6 months works for me to return about 6,000 records without a connection failure. -->
 * closed_date_offset = Used to offset the closed date updated by the system so it better reflects when the status is updated to a completed/closed status. I find 3 works well.
 * domain_name = Used to return a list of users from Active Directory
 
